@@ -5,17 +5,14 @@ let page = 1;
 
 const fetchData = async () => {
 
-  // const result = await fetch(url + "?page="+ page++);
-  const result = await fetch(url);
-  const data = await result.json();
-
-  // return (data.data);  
-  return (data);  
-
+  let result = await fetch(url + "?page=" + page++);
+  // const result = await fetch(url);
+  let data = await result.json()
+  return (data.data);
 };
 
 const addContent = async () => {
-  const data = await fetchData()
+  let data = await fetchData()
   data.forEach(post => {
     const card = document.createElement("div");
     card.className = "card";
@@ -33,7 +30,8 @@ const addContent = async () => {
     gridContainer.appendChild(card); 
   });
 };
-
+//  <img style="width:100px;" src="${post.image.src}" alt="">
+// <p>${post.variants[0].price}</p> 
 const handleIntersect = entries => {
   // console.log(entries);
   if (entries[0].isIntersecting) {
