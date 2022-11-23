@@ -19,11 +19,17 @@ const addContent = async () => {
   data.forEach(post => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<h2>${post.title}</h2><img style="width:100px;" src="${post.image.src}" alt=""> <button class="ato-cart"> Add to Cart 
-    <span class="material-symbols-outlined btn-icon" 
-    style="">
+    card.innerHTML = `
+    <div class="card-container">
+    <h2>${post.title}</h2>
+    <img style="width:100px;" src="${post.image.src}" alt="">
+    <p>${post.variants[0].price}</p> 
+    <button class="ato-cart"> Add to Cart 
+    <span class="material-symbols-outlined btn-icon">
     add_circle
-    </span> </button> `;
+    </span>
+    </div>
+    </button> `;
     gridContainer.appendChild(card); 
   });
 };
