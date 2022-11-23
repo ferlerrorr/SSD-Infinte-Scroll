@@ -1,6 +1,7 @@
-@import 'motiva-sans/MotivaSansRegular.woff.ttf';
-@import 'motiva-sans/MotivaSansExtraBold.ttf';
-@import 'motiva-sans/MotivaSansBold.woff.ttf';
+@import 'motiva-sans/MotivaSansRegular.woff.ttf&display=swap';
+@import 'motiva-sans/MotivaSansExtraBold.ttf&display=swap';
+@import 'motiva-sans/MotivaSansBold.woff.ttf&display=swap';
+
 
 .material-symbols-outlined {
   font-variation-settings:
