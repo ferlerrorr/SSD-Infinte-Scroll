@@ -1,6 +1,6 @@
-@import url('./motiva-sans/MotivaSansRegular.woff.ttf');
-@import url('./motiva-sans/MotivaSansExtraBold.ttf');
-@import url('./motiva-sans/MotivaSansBold.woff.ttf');
+@import './motiva-sans/MotivaSansRegular.woff.ttf';
+@import './motiva-sans/MotivaSansExtraBold.ttf';
+@import './motiva-sans/MotivaSansBold.woff.ttf';
 
 *,
 ::before,
