@@ -1,6 +1,6 @@
-@import 'motiva-sans/MotivaSansRegular.woff.ttf&display=swap';
-@import 'motiva-sans/MotivaSansExtraBold.ttf&display=swap';
-@import 'motiva-sans/MotivaSansBold.woff.ttf&display=swap';
+@import 'motiva-sans/MotivaSansRegular.woff.ttf';
+@import 'motiva-sans/MotivaSansExtraBold.ttf';
+@import 'motiva-sans/MotivaSansBold.woff.ttf';
 
 
 .material-symbols-outlined {
@@ -90,8 +90,8 @@ h1 {
   @media only screen and (max-width:375px)  {
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        grid-auto-rows: 150px;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        grid-auto-rows: 190px;
         grid-gap: 10x;
     }
   }
@@ -127,31 +127,38 @@ h1 {
     
     
 .card p{
-    font-size: clamp(.9rem, .3vw, 8px);
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: bold;
+    font-size: clamp(.6rem, .2vw, 2px);
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    color: green;
 }  
     
     
-@media(max-width:499px){
-        
-        .card h2 {
-            
-            font-size: clamp(.7rem, .3vw, 5px);
+@media(max-width:690px){
+         .card h2 {
+             font-size: clamp(.6rem, .2vw, 2px) !important;
+             padding: calc(0 + 1vmin) 5px;
         }
         .card img {
-            width: 80px !important;
-             margin-top: 15px;  
-             margin-bottom: 45px;  
-           }
-        
-    }
+            width: 82px !important;
+             margin-top: 10px;  
+             margin-bottom: 0;  
+        }
+
+}
     
 
 .card h2 {
   
     font-family: 'Motiva Sans', sans-serif;
     font-size: clamp(1rem, 1vw, 1px);
-    text-align: center;
-    /* padding: calc(30px + 1vmin) 10px; */
+   text-align: center;
+    /*  position: absolute; */
+    /* top: 5%; */
+    padding: calc(0 + .5vmin) 5px;
 }
 
 
@@ -204,6 +211,16 @@ h1 {
     }
     
   }
+
+
+  @media  (max-width:375px) {
+    .ato-cart{
+        padding: 4px 4px 4px 6px;
+        font-size: .48rem;
+    }
+    
+  }
+
 
 .ato-cart:active{
   
