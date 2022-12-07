@@ -258,3 +258,37 @@ h1 {
 
 
 
+.loader{
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+    border: 2px solid dodgerblue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-top: 50px;
+    animation: loader 0.5s infinite alternate;
+}
+
+
+.loader.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes loader {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 700px){
+    main .images-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

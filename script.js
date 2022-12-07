@@ -5,13 +5,17 @@ let page = 1;
 let headersList = {
   "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MDIyMTE2NywibmJmIjoxNjcwMjIxMTY3LCJqdGkiOiJ0T1B4b3BuemR2dGdXMUNmIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7N2ztr_V1Cn6_HqwIliqD_GSVwl5Q8XxEIGHJ5LWmlE"
  }
-
+ 
+ const loader = document.getElementById("loader");
 const fetchData = async () => {
+  
+  
   let result = await fetch(url + "?page=" + page++ , { 
     method: "GET",
     headers: headersList
-  });
-
+  }
+  );
+  
   // const result = await fetch(url);
   let data = await result.json()
   return (data.data);
@@ -35,14 +39,17 @@ const addContent = async () => {
     </button> `;
     gridContainer.appendChild(card); 
   });
+  loader.classList.remove("show");
 };
 //  <img style="width:100px;" src="${post.image.src}" alt="">
 // <p>${post.variants[0].price}</p> 
 const handleIntersect = entries => {
   // console.log(entries);
+  loader.classList.add("show");
   if (entries[0].isIntersecting) {
     addContent();
   }
+  
 };
 
 const options = {
